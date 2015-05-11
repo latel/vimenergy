@@ -85,6 +85,9 @@ set guioptions-=L           "隐藏左侧的滚动条
 set guifont=Consolas:h13
 "set gfw=YouYuan:h8:cGB2312
 "4.体验
+set noimdisable
+autocmd! InsertLeave * set imdisable|set iminsert=0
+autocmd! InsertEnter * set noimdisable|set iminsert=0
 set shiftround              "当你的缩进不成倍时，让 Vim 自动帮你把周围的缩进化零为整
 set list                    "显示特殊符号
 if g:isWindows
@@ -296,6 +299,15 @@ let g:vimrc_homepage='http://kezhen.info/'
 " < Vim-Markdown 插件配置 >
 """"""""""""""""""""""""""""""
 let g:vim_markdown_folding_disabled=1
+
+""""""""""""""""""""""""""""""
+" < Gist-Vim 插件配置 >
+""""""""""""""""""""""""""""""
+let g:gist_detect_filetype = 1                  " 探测文件类型
+let g:gist_open_browser_after_post = 1          " 发布后自动使用浏览器打开
+" let g:gist_browser_command = 'opera %URL% &'  " 使用指定的浏览器
+" let g:gist_post_private = 1                   " 默认发布私人Gist
+
 
 
 " 功能性函数定义
