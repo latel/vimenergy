@@ -45,6 +45,7 @@ endfunction
 "------------------------------------------------------
 "1.基础
 set nocompatible            "无需兼容vi
+set nobomb                  "去掉BOMB头
 set number                  "显示行号
 set relativenumber          "显示相对行号
 set ruler                   "显示标尺
