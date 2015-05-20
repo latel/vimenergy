@@ -50,8 +50,8 @@ set number                  "显示行号
 set relativenumber          "显示相对行号
 set ruler                   "显示标尺
 set cc=90                   "越界标尺
-winpos 100 100              "设置启动窗口的位置,坐标原点在屏幕左上角
-set lines=36 columns=132    "设置启动窗口的大小
+winpos 20 40              "设置启动窗口的位置,坐标原点在屏幕左上角
+set lines=50 columns=102    "设置启动窗口的大小
 set backspace=indent,eol,start
 set whichwrap=b,s,<,>,[,]
 set bsdir=buffer            "设置工作目录为当前编辑文件的目录
@@ -74,7 +74,7 @@ colo monokai
 set cursorline              "高亮当前行
 "set guioptions-=m           "隐藏菜单
 set guioptions-=T           "隐藏工具栏
-"set guioptions-=r           "隐藏右侧的滚动条
+set guioptions-=r           "隐藏右侧的滚动条
 "set guioptions-=b           "隐藏底侧的滚动条
 set guioptions-=L           "隐藏左侧的滚动条
 "set guifont=Monospace\ 9   "字体名称空格用下划线代替或者\转义
