@@ -191,14 +191,14 @@ nmap <F7> :call FormatHTML()<cr>gg=G
 if g:isWindows
     autocmd! bufwritepost $VIMRUNTIME/_vimrc source %
 else
-    autocmd! bufwritepost ~/.vimrc source %
+    autocmd! bufwritepost ~/_vimrc source %
 endif
 "2.启动插件管理器
 execute pathogen#infect()
 "call pathogen#runtime_append_all_bundles() " 老版本写法
 
 "3.每行超过80个的字符用下划线标示
-autocmd BufWinEnter * let w:m2=matchadd('Underlined', '\%>' . 90 . 'v.\+', -1)
+" autocmd BufWinEnter * let w:m2=matchadd('Underlined', '\%>' . 90 . 'v.\+', -1)
 
 "4.根据文档类型自动处理
 "PHP
