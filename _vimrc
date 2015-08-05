@@ -83,7 +83,11 @@ set guioptions-=L           "隐藏左侧的滚动条
 "set guifont=YaHei\ Consolas\ Hybrid\ 9.1
 "set guifont=YaHei Consolas Hybrid 13
 "set guifont=Courier\ New\ Bold:h13
-set guifont=Consolas:h13
+if (g:isWindows)
+    set guifont=Consolas:h11
+else
+    set guifont=Consolas:h13
+endif
 "set gfw=YouYuan:h8:cGB2312
 "4.体验
 set noimdisable
@@ -91,9 +95,7 @@ autocmd! InsertLeave * set imdisable|set iminsert=0
 autocmd! InsertEnter * set noimdisable|set iminsert=0
 set shiftround              "当你的缩进不成倍时，让 Vim 自动帮你把周围的缩进化零为整
 set list                    "显示特殊符号
-if g:isWindows
-    set list listchars=tab:▸\ ,trail:., "详细的定义显示哪些符号
-else
+if !g:isWindows
     set list listchars=eol:¬,tab:▸\ ,trail:., "详细的定义显示哪些符号
 endif
 set showmatch               "打开此选项使得你在输入成对的括号时，Vim 会帮助你跳转并高亮一下匹配的括号
