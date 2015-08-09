@@ -73,7 +73,9 @@ colo lucius
 colo monokai
 set cursorline              "高亮当前行
 "set guioptions-=m           "隐藏菜单
-set guioptions-=T           "隐藏工具栏
+if (!g:isWindows)
+    set guioptions-=T           "隐藏工具栏
+endif
 set guioptions-=r           "隐藏右侧的滚动条
 "set guioptions-=b           "隐藏底侧的滚动条
 set guioptions-=L           "隐藏左侧的滚动条
