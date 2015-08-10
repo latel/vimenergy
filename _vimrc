@@ -98,7 +98,7 @@ autocmd! InsertEnter * set noimdisable|set iminsert=0
 set shiftround              "当你的缩进不成倍时，让 Vim 自动帮你把周围的缩进化零为整
 set list                    "显示特殊符号
 if g:isWindows
-    set list listchars=trail:., "详细的定义显示哪些符号
+    set list listchars=eol:˥,trail:., "详细的定义显示哪些符号
 elseif
     set list listchars=eol:¬,tab:▸\ ,trail:., "详细的定义显示哪些符号
 endif
@@ -195,7 +195,7 @@ nmap <F7> :call FormatHTML()<cr>gg=G
 "------------------------------------------------------
 "1.自动重载vimrc,无需重启Vim即可看到修改vimrc的效果
 if g:isWindows
-    autocmd! bufwritepost $VIMRUNTIME/_vimrc source %
+    autocmd! bufwritepost $VIMRUNTIME/../_vimrc source %
 else
     autocmd! bufwritepost ~/_vimrc source %
 endif
