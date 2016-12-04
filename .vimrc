@@ -99,7 +99,7 @@ set shiftround              "当你的缩进不成倍时，让 Vim 自动帮你�
 set list                    "显示特殊符号
 if g:isWindows
     set list listchars=eol:˥,trail:., "详细的定义显示哪些符号
-elseif
+else
     set list listchars=eol:¬,tab:▸\ ,trail:., "详细的定义显示哪些符号
 endif
 set showmatch               "打开此选项使得你在输入成对的括号时，Vim 会帮助你跳转并高亮一下匹配的括号
