@@ -165,8 +165,7 @@ nmap <A-x> :IndentLinesToggle<cr>
 nmap <A-o> o<ESC>k
 "常规模式下输入 cls 清除行首和行尾空格
 nmap cls :%s/\s\+$//g<cr>
-"常规模式下输入 clm 清除行尾的 
- 符号
+"常规模式下输入 clm 清除行尾的M符号
 nmap clm :%s/\r$//g<cr>:noh<cr>
 "选中模式下允许C-c复制文本
 vmap <C-c> "+y
