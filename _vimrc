@@ -114,9 +114,6 @@ set smartindent             "基于autoindent的一些改进
 set autoindent!             "自动缩进，即为新行自动添加与当前行同等的缩进
 "set shortmess=atI          "去掉欢迎界面
 "au GUIEnter * simalt ~x    "窗口启动时自动最大化
-set novisualbell            "关闭可视化响铃
-set visualbell t_vb=        "关闭可视化响铃 
-set vb t_vb=                "禁用 烦人的Beep声
 
 "set pastetoggle=<F11>      "切换粘贴模式
 syntax enable               "启用语法高亮
@@ -168,7 +165,8 @@ nmap <A-x> :IndentLinesToggle<cr>
 nmap <A-o> o<ESC>k
 "常规模式下输入 cls 清除行首和行尾空格
 nmap cls :%s/\s\+$//g<cr>
-"常规模式下输入 clm 清除行尾的  符号
+"常规模式下输入 clm 清除行尾的 
+ 符号
 nmap clm :%s/\r$//g<cr>:noh<cr>
 "选中模式下允许C-c复制文本
 vmap <C-c> "+y
